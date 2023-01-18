@@ -1,9 +1,21 @@
+.form__button {
+    background-color: teal;
+    color: #fff;
+    padding: 7px;
+    border: none;
+}
+
+.form__button:active {
+    padding: 8px;
+}
+
 .form__list {
     list-style: none;
 }
 
 .form__listItem {
-    padding: 5px;
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
 }
 
 .form__listItem--done {
