@@ -1,3 +1,33 @@
-.taskDone {
+.form__list {
+    list-style: none;
+}
+
+.form__listItem {
+    padding: 5px;
+}
+
+.form__listItem--done {
     text-decoration: line-through;
+}
+
+.form__removeButton {
+    background-color: red;
+    color: white;
+    border: none;
+    margin: 0 10px;
+}
+
+.form__removeButton:active {
+    border: 2px solid black;
+}
+
+.form__doneButton {
+    background-color: #0acc0a;
+    color: #0acc0a;
+    border: none;
+    margin: 0 10px;
+}
+
+.form__doneButton--checked {
+    color: white;
 }
