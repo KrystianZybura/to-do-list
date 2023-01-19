@@ -25,13 +25,15 @@
     </header>
     <main class="main">
         <form class="form js-form">
-            <p class="form__paragraph">Dodaj nowe zadanie</p>
-            <label>
-                <input class="js-newTask" placeholder="Co jest do zrobienia?">
-                <input class="form__button" type="submit" value="Dodaj zadanie">
-            </label>
-            <p class="form__paragraph">Lista zadań</p>
-            <ul class="form__list js-tasks"></ul>
+            <fieldset class="form__fieldset">
+                    <p class="form__paragraph">Dodaj nowe zadanie</p>
+                    <label class="form__label">
+                        <input class="form__labelText js-newTask" placeholder="Co jest do zrobienia?">
+                        <input class="form__button" type="submit" value="Dodaj zadanie">
+                    </label>
+                    <p class="form__paragraph">Lista zadań</p>
+                    <ul class="form__list js-tasks"></ul>
+            </fieldset>
         </form>
     </main>
 </body>

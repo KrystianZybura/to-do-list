@@ -1,21 +1,54 @@
+.form {
+    display: grid;
+    grid-template-rows: 340px 1fr;
+    grid-gap: 20px;
+}
+
+.form__label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__fieldset {
+    background-color: white;
+    border: none;
+    padding: 40px;
+}
+
+.form__labelText {
+    padding: 5px;
+    flex-grow: 10;
+    margin-right: 20px;
+}
+
 .form__button {
     background-color: teal;
     color: #fff;
     padding: 7px;
     border: none;
+    flex-grow: 1;
 }
 
 .form__button:active {
     padding: 8px;
 }
 
+.form__paragraph {
+    font-weight: bold;
+}
+
 .form__list {
     list-style: none;
+    padding-left: 10px;
 }
 
 .form__listItem {
     padding: 10px 0;
     border-bottom: 1px solid grey;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-gap: 10px;
+    align-items: space-around;
 }
 
 .form__listItem--done {
@@ -26,7 +59,9 @@
     background-color: red;
     color: white;
     border: none;
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form__removeButton:active {
@@ -37,7 +72,9 @@
     background-color: #0acc0a;
     color: #0acc0a;
     border: none;
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form__doneButton--checked {
