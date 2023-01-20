@@ -2,7 +2,7 @@
     background-color: white;
 }
 
-.form__container {
+.form__special {
     background-color: #eee;
     color: #eee;
     margin: 0 -22px;
@@ -29,11 +29,10 @@
 }
 
 .form__button {
-    background-color: teal;
+    background-color: #006e80;
     color: #fff;
     padding: 10px;
     border: none;
-    flex-grow: 1;
 }
 
 .form__button:active {
