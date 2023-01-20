@@ -24,15 +24,14 @@
 }
 
 .form__labelText {
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid rgb(209, 209, 209);
 }
 
 .form__button {
     background-color: teal;
     color: #fff;
-    padding: 7px;
+    padding: 10px;
     border: none;
     flex-grow: 1;
 }
@@ -42,11 +41,11 @@
 }
 
 .form__paragraph {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    border-bottom: 1px solid rgb(216, 215, 215);
+    border-bottom: 2px solid #e8e8e8;
     padding: 20px;
-    margin: -10px -20px 20px;
+    margin: -10px -22px 20px;
 }
 
 .form__list {
@@ -56,11 +55,13 @@
 
 .form__listItem {
     padding: 10px 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 2px solid #e8e8e8;
     display: grid;
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 30px 1fr 30px;
     grid-gap: 10px;
-    align-items: space-around;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .form__listItem--done {
@@ -68,12 +69,14 @@
 }
 
 .form__removeButton {
-    background-color: red;
+    background-color: crimson;
     color: white;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    height: 30px;
 }
 
 .form__removeButton:active {
@@ -81,12 +84,14 @@
 }
 
 .form__doneButton {
-    background-color: #0acc0a;
-    color: #0acc0a;
+    background-color: green;
+    color: green;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    height: 30px;
 }
 
 .form__doneButton--checked {
