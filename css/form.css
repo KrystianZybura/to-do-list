@@ -1,24 +1,32 @@
 .form {
-    display: grid;
-    grid-template-rows: 340px 1fr;
-    grid-gap: 20px;
+    background-color: white;
+}
+
+.form__container {
+    background-color: #eee;
+    color: #eee;
+    margin: 0 -22px;
+    font-size: 9px;
 }
 
 .form__label {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    grid-gap: 20px;
 }
 
 .form__fieldset {
-    background-color: white;
     border: none;
-    padding: 40px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
 .form__labelText {
     padding: 5px;
-    flex-grow: 10;
-    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .form__button {
@@ -34,7 +42,11 @@
 }
 
 .form__paragraph {
+    font-size: 20px;
     font-weight: bold;
+    border-bottom: 1px solid rgb(216, 215, 215);
+    padding: 20px;
+    margin: -10px -20px 20px;
 }
 
 .form__list {
