@@ -35,6 +35,7 @@
 
         removeButtons.forEach((removeButtons, index) => {
             removeButtons.addEventListener("click", () => {
+                
                 removeTask(index);
             });
         });
@@ -64,7 +65,7 @@
 
         newTaskContent.focus();
 
-        if (newTaskContent.value === "") {
+        if (newTaskContent.value.trim() === "") {
             return;
         }
 
