@@ -1,5 +1,5 @@
 # Krystian Żybura - To do List
-Simple to do list made as a part of my homework in programming course - Youcode.pl
+Simple to do list website made as a part of my homework project from my programming course - ***Youcode***.
 
 ## Demo
 Check my website here --> [To do List](https://krystianzybura.github.io/to-do-list/).
