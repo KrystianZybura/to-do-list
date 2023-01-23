@@ -35,7 +35,7 @@
 
         removeButtons.forEach((removeButtons, index) => {
             removeButtons.addEventListener("click", () => {
-                
+
                 removeTask(index);
             });
         });
@@ -47,9 +47,16 @@
         for (const task of tasks) {
             htmlString += `
                 <li class="form__listItem js-listItem">
-                    <button class="form__doneButton js-done ${task.done ? "form__doneButton--checked" : ""}">✔</button>
-                    <span ${task.done ? 'class="form__listItem--done"' : ''}>${task.content}</span>
-                    <button class="form__removeButton js-remove">🗑</button>
+                    <button
+                        class="form__listButton form__listButton--done js-done
+                        ${task.done ? "form__listButton--checked" : ""}">✔
+                    </button>
+                    <span
+                        ${task.done ? 'class="form__listItem--done"' : ''}
+                    >
+                        ${task.content}
+                    </span>
+                    <button class="form__listButton js-remove">🗑</button>
                 </li>
         `;
         }
