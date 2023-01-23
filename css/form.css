@@ -56,21 +56,17 @@
 
 @media (max-width: 767px) {
     .form__inputContainer {
-        gap: 15px;
+        gap: 10px;
     }
 
     .form__inputText {
-        padding: 11px;
-        font-size: 16px;
+        padding: 10px;
+        font-size: 15px;
     }
 
     .form__button {
-        font-size: 17px;
-        padding: 11px;
-    }
-
-    .form__button:active {
-        padding: 12px;
+        font-size: 16px;
+        padding: 10px;
     }
 }
 
@@ -79,14 +75,14 @@
     font-weight: bold;
     border-bottom: 2px solid #e4dfdf;
     padding: 25px;
-    margin: -30px -22px 20px;
+    margin: -30px -21px 20px;
 }
 
 @media (max-width: 767px) {
     .form__paragraph {
         font-size: 22px;
         padding: 20px;
-        margin: -20px -22px 20px;
+        margin: -20px -15px 20px;
     }
 }
 
