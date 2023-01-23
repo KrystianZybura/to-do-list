@@ -1,0 +1,57 @@
+.form__list {
+    padding-left: 0px;
+    margin-top: -10px;
+}
+
+.form__listItem {
+    border-bottom: 2px solid #e8e8e8;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-gap: 10px;
+    padding: 15px 20px;
+    align-items: center;
+    word-break: break-word;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .form__listItem {
+        grid-template-columns: 30px 1fr 30px;
+        font-size: 16px;
+    }
+}
+
+.form__listItem--done {
+    text-decoration: line-through;
+}
+
+.form__listButton {
+    background-color: crimson;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    height: 40px;
+}
+
+@media (max-width: 767px) {
+    .form__listButton {
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+.form__listButton:active {
+    border: 2px solid black;
+}
+
+.form__listButton--done {
+    background-color: green;
+    color: green;
+}
+
+.form__listButton--checked {
+    color: white;
+}
