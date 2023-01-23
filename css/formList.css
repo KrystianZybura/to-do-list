@@ -6,19 +6,12 @@
 .form__listItem {
     border-bottom: 2px solid #e8e8e8;
     display: grid;
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 30px 1fr 30px;
     grid-gap: 10px;
     padding: 15px 20px;
     align-items: center;
     word-break: break-word;
-    font-size: 18px;
-}
-
-@media (max-width: 767px) {
-    .form__listItem {
-        grid-template-columns: 30px 1fr 30px;
-        font-size: 16px;
-    }
+    font-size: 17px;
 }
 
 .form__listItem--done {
@@ -32,15 +25,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    height: 40px;
-}
-
-@media (max-width: 767px) {
-    .form__listButton {
-        height: 30px;
-        font-size: 16px;
-    }
+    font-size: 17px;
+    height: 30px;
 }
 
 .form__listButton:active {

@@ -6,9 +6,25 @@
     flex-wrap: wrap;
 }
 
+.form__header {
+    font-size: 21px;
+    font-weight: bold;
+    border-bottom: 2px solid #e4dfdf;
+    padding: 22px;
+    margin: -30px -21px 12px;
+}
+
+@media (max-width: 767px) {
+    .form__header {
+        font-size: 20px;
+        padding: 20px;
+        margin: -20px -15px 20px;
+    }
+}
+
 .form__fieldset {
     background-color: white;
-    padding: 33px 20px;
+    padding: 30px 15px;
     display: grid;
     align-items: center;
     grid-gap: 20px;
@@ -17,16 +33,17 @@
     border: none;
 }
 
+
 .form__inputContainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    font-size: 20px;;
+    font-size: 19px;;
 }
 
 .form__inputText {
-    padding: 13px;
+    padding: 12px;
     border: 2px solid #d1d1d1;
     flex-grow: 50;
 }
@@ -34,7 +51,7 @@
 .form__button {
     background-color: #006e80;
     color: #fff;
-    padding: 13px;
+    padding: 12px;
     border: none;
     flex-grow: 1;
 }
@@ -45,7 +62,6 @@
 
 @media (max-width: 767px) {
     .form__fieldset {
-        padding: 30px 15px;
         grid-gap: 15px;
     }
 
