@@ -5,7 +5,7 @@ Simple to do list made as a part of my homework in programming course - Youcode.
 Check my website here --> [To do List](https://krystianzybura.github.io/to-do-list/).
 
 ## Preview
-![preview]()
+![preview](https://raw.githubusercontent.com/KrystianZybura/to-do-list/main/images/preview.gif)
 
 ## Features of the site
 - Ability to add a custom task.
