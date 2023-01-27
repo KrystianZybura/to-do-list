@@ -1,0 +1,17 @@
+.section {
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px 1px #e4dfdf;
+    font-size: 17px;
+}
+
+.section__header {
+    font-size: 23px;
+    border-bottom: 2px solid #e4dfdf;
+    padding: 20px;
+    margin: 0;
+}
+
+.section__body {
+    padding: 30px 20px;
+}
