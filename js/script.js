@@ -46,17 +46,17 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="form__listItem js-listItem">
+                <li class="list__item js-listItem">
                     <button
-                        class="form__listButton form__listButton--done js-done
-                        ${task.done ? "form__listButton--checked" : ""}">✔
+                        class="list__button list__button--done js-done
+                        ${task.done ? "list__button--checked" : ""}">✔
                     </button>
                     <span
-                        ${task.done ? 'class="form__listItem--done"' : ''}
+                        ${task.done ? 'class="list__item--done"' : ''}
                     >
                         ${task.content}
                     </span>
-                    <button class="form__listButton js-remove">🗑</button>
+                    <button class="list__button js-remove">🗑</button>
                 </li>
         `;
         }
@@ -79,7 +79,7 @@
 
         addNewTask(newTaskContent);
 
-        newTaskContent = "";
+        newTask.value = "";
     };
 
     const init = () => {
