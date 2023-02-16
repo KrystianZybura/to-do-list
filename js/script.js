@@ -109,26 +109,3 @@
 
     init();
 }
-
-
-// let tasks2 = [
-//     { content: "Zrobić kawę", done: true },
-//     { content: "Spotkać się z dziewczyną", done: false },
-//     { content: "Położyć się spać", done: true },
-// ];
-
-// let tasks3 = [
-//     { content: "Zrobić kdsadawę", done: true },
-//     { content: "Spotkać sadasdasdsadsię z dziewczyną", done: false },
-//     { content: "Położyć sadasdsię spać", done: true },
-// ];
-
-// const tasks4 = [
-
-//     ...tasks2,
-//     ...tasks3,
-// ];
-
-// // jedna tablica łącząca tasks i new tasks etc w funkcji render
-
-// let number = 5;
