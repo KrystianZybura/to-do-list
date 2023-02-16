@@ -1,25 +1,34 @@
 {
-    const tasks = [];
+    let tasks = [];
+
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [...tasks,
+        { content: newTaskContent, done: false },
+        ];
 
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1),
+        ];
 
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = tasks.map(task => {
+            if (taskIndex === tasks.indexOf(task))
+                task.done = !task.done;
+            return task;
+        });
 
         render();
-    }
+    };
 
     const bindEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -41,7 +50,7 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -61,7 +70,15 @@
         `;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
 
+    const renderButtons = () => {
+
+    };
+
+    const render = (newTask) => {
+        renderTasks(newTask);
+        renderButtons();
         bindEvents();
     };
 
@@ -92,3 +109,26 @@
 
     init();
 }
+
+
+// let tasks2 = [
+//     { content: "Zrobić kawę", done: true },
+//     { content: "Spotkać się z dziewczyną", done: false },
+//     { content: "Położyć się spać", done: true },
+// ];
+
+// let tasks3 = [
+//     { content: "Zrobić kdsadawę", done: true },
+//     { content: "Spotkać sadasdasdsadsię z dziewczyną", done: false },
+//     { content: "Położyć sadasdsię spać", done: true },
+// ];
+
+// const tasks4 = [
+
+//     ...tasks2,
+//     ...tasks3,
+// ];
+
+// // jedna tablica łącząca tasks i new tasks etc w funkcji render
+
+// let number = 5;
