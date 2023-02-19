@@ -7,11 +7,48 @@
 
 .section__header {
     font-size: 23px;
+    margin: 0;
+}
+
+.section__header--form {
     border-bottom: 2px solid #e4dfdf;
     padding: 20px;
-    margin: 0;
 }
 
 .section__body {
     padding: 30px 20px;
+}
+
+.section__gridContainer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 2px solid #e4dfdf;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .section__gridContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .section__flexContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        align-items: center;
+    }
+}
+
+.section__button {
+    background-color: #fff;
+    color: teal;
+    border: none;
+    font-size: 18px;
+}
+
+.section__button:disabled {
+    color: #cacaca;
 }
