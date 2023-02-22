@@ -50,9 +50,26 @@
         });
     };
 
+    const completeAllTasks = () => {
+        tasks = tasks.map(task => {
+            if (!task.done) {
+                task.done = !task.done;
+            }
+            return task;
+        });
+
+        render();
+    };
+
     const bindButtonsEvents = () => {
         const hideDoneTasksButton = document.querySelector(".js-hideTaskButton");
+        hideDoneTasksButton.addEventListener("click", () => { });
 
+        if (tasks.some(({ content }) => content)) {
+            const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
+
+            completeAllTasksButton.addEventListener("click", completeAllTasks);
+        }
     };
 
     const renderTasks = () => {
@@ -80,12 +97,12 @@
     const renderButtons = () => {
         let htmlString = "";
 
-        if (tasks.some(({content}) => content)) {
+        if (tasks.some(({ content }) => content)) {
             htmlString += `
                 <button class="section__button js-hideTaskButton">Ukryj ukończone</button>
                 <button 
-                    ${tasks.every(({done}) => done) ? "disabled" : ""}
-                    class="section__button js-completeTaskButton"
+                    ${tasks.every(({ done }) => done) ? "disabled" : ""}
+                    class="section__button js-completeAllTasksButton"
                 >
                     Ukończ wszystkie
                 </button>
