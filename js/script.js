@@ -62,14 +62,19 @@
     };
 
     const bindButtonsEvents = () => {
+
+        if (!tasks.some(({ content }) => content)) {
+            return;
+        }
+        
+        const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
+
+        completeAllTasksButton.addEventListener("click", completeAllTasks);
+
         const hideDoneTasksButton = document.querySelector(".js-hideTaskButton");
+
         hideDoneTasksButton.addEventListener("click", () => { });
 
-        if (tasks.some(({ content }) => content)) {
-            const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
-
-            completeAllTasksButton.addEventListener("click", completeAllTasks);
-        }
     };
 
     const renderTasks = () => {
