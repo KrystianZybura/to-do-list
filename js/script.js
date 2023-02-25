@@ -65,20 +65,16 @@
         if (!tasks.some(({ content }) => content)) {
             return;
         }
-
+    
         const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
+
         completeAllTasksButton.addEventListener("click", completeAllTasks);
 
-        const hideDoneTasksButton = document.querySelector(".js-hideTaskButton");
+        const hideDoneTasksButton = document.querySelector(".js-hideDoneTasksButton");
+
         hideDoneTasksButton.addEventListener("click", () => {
             hideDoneTasks = !hideDoneTasks;
 
-            if (hideDoneTasks === true) {
-                tasksBackup = [...tasks]
-                tasks = tasks.filter(({ done }) => !done);
-            }
-            else
-                tasks = [...tasksBackup]
             render();
         });
     };
@@ -87,7 +83,11 @@
         let htmlString = "";
 
         for (const task of tasks) {
-            htmlString += `
+            if (task.done === true && hideDoneTasks === true) {
+                htmlString += ``;
+            }
+            else {
+                htmlString += `
                     <li class="list__item js-listItem">
                         <button
                             class="list__button list__button--done js-done
@@ -100,9 +100,11 @@
                         </span>
                         <button class="list__button js-remove">🗑</button>
                     </li>
-        `;
+                `;
+            }
+
+            document.querySelector(".js-tasks").innerHTML = htmlString;
         }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
     const renderButtons = () => {
@@ -110,7 +112,7 @@
 
         if (tasks.some(({ content }) => content)) {
             htmlString += `
-                <button class="section__button js-hideTaskButton"
+                <button class="section__button js-hideDoneTasksButton"
                 >
                     ${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}
                 </button>
@@ -120,7 +122,7 @@
                 >
                     Ukończ wszystkie
                 </button>
-        `;
+            `;
         }
         document.querySelector(".js-buttonsContainer").innerHTML = htmlString;
     };
