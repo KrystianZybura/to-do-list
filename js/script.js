@@ -22,8 +22,9 @@
 
     const toggleTaskDone = (taskIndex) => {
         tasks = tasks.map(task => {
-            if (taskIndex === tasks.indexOf(task))
+            if (taskIndex === tasks.indexOf(task)) {
                 task.done = !task.done;
+            }
             return task;
         });
 
@@ -61,22 +62,26 @@
         render();
     };
 
+    const toggleHideDoneTasks = () => {
+        if (tasks.some(({ done }) => done)) {
+            hideDoneTasks = !hideDoneTasks;
+        }
+        
+        render();
+    };
+
     const bindButtonsEvents = () => {
         if (!tasks.some(({ content }) => content)) {
             return;
         }
-    
+
         const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
 
         completeAllTasksButton.addEventListener("click", completeAllTasks);
 
         const hideDoneTasksButton = document.querySelector(".js-hideDoneTasksButton");
 
-        hideDoneTasksButton.addEventListener("click", () => {
-            hideDoneTasks = !hideDoneTasks;
-
-            render();
-        });
+        hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
     };
 
     const renderTasks = () => {
