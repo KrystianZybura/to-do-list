@@ -66,7 +66,7 @@
         if (tasks.some(({ done }) => done)) {
             hideDoneTasks = !hideDoneTasks;
         }
-        
+
         render();
     };
 
@@ -107,9 +107,9 @@
                     </li>
                 `;
             }
-
-            document.querySelector(".js-tasks").innerHTML = htmlString;
         }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
     const renderButtons = () => {
