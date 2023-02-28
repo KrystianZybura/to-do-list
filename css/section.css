@@ -44,9 +44,13 @@
 
 .section__button {
     background-color: #fff;
-    color: teal;
+    color: #008080;
     border: none;
     font-size: 18px;
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 35%);
 }
 
 .section__button:disabled {
