@@ -5,7 +5,7 @@
 
     const addNewTask = (newTaskContent) => {
         tasks = [...tasks,
-        { content: newTaskContent, done: false },
+        { content: newTaskContent },
         ];
 
         render();
@@ -25,6 +25,7 @@
             if (taskIndex === tasks.indexOf(task)) {
                 task.done = !task.done;
             }
+
             return task;
         });
 
@@ -56,6 +57,7 @@
             if (!task.done) {
                 task.done = !task.done;
             }
+
             return task;
         });
 
@@ -76,11 +78,9 @@
         }
 
         const completeAllTasksButton = document.querySelector(".js-completeAllTasksButton");
-
         completeAllTasksButton.addEventListener("click", completeAllTasks);
 
         const hideDoneTasksButton = document.querySelector(".js-hideDoneTasksButton");
-
         hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
     };
 
