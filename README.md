@@ -7,17 +7,21 @@ Check my website here --> [To do List](https://krystianzybura.github.io/to-do-li
 ## Preview
 ![preview](https://raw.githubusercontent.com/KrystianZybura/to-do-list/main/images/preview.gif)
 
-## Features of the site
-- Ability to add a custom task.
-- Possibility to set the task as done. 
-- The unwanted tasks can be easly removed.
-- Currently the site has a special *cheat ability* towards your tasks - for any user who is willing to loose his schedule has an ability to refresh the site and all of the tasks you've added before will **magically disappear**, so everbody can enjoy having free time 😎
-- Also the feature above will be probably fixed in the future, so enjoy it while it lasts!
+## What can you do on my website? - Features of the site 🤩
+- Add a custom task with any content you like.
+- Set your task as done. 
+- Any unwanted tasks can be easly removed in no time.
+- Set your all entered tasks as done with just one click.
+- Hide and toggle visiblity of done tasks.
 
-### Technologies used in the project:
+### Technologies used in the project 🥰
 - *HTML*.
 - *CSS*.
 - *JavaScript (ES6 + Features)*.
-- *FLEXBOX*.
-- *GRID.*
+- *FlexBox*.
+- *Grid.*
 - *BEM.*
+- *Immutability.*
+
+### Quick reminder 😲
+- Unfortunately, at the current state of the webiste any entered tasks won't be saved and will disappear as soon as you refresh the site (it will be fixed in the future).
